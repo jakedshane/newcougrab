@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family: Roboto, sans-serif;">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Cougrab</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto&amp;display=swap">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/Navbar-Right-Links.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;600;700;800;900&display=swap');
+    </style>
+    <link rel="icon" type="image/x-icon" href="images/favicon.png">
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.min.css">
+</head>
+
+<body class="col-12 col-lg-auto mb-3 mb-lg-0">
+    <nav class="navbar navbar-light navbar-expand-md navBackground">
+        <div class="container"> <a class="navbar-brand d-flex align-items-center" href=""> <img src="images/logo.png"
+                    style="width:100px" class="logoPic"> </a> <button data-bs-toggle="collapse" class="navbar-toggler "
+                data-bs-target="#navcol-2"> <span class="visually-hidden">Toggle
+                    navigation</span> <span class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navcol-2">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link navItem active" id="terms" href="#">Terms Of Use</a></li>
+                    <li class="nav-item"><a class="nav-link navItem active" id="contact" href="#">Contact us</a></li>
+                    <li class="nav-item"><a class="nav-link navItem SuperActive" id="account" href="#">Account</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="py-3 mb-4 border-bottom searchBar">
+
+        <div class="container d-flex flex-wrap justify-content-center subHeaderClass"
+            style="position: relative !important;"> <input
+                class="form-control form-control-lg justify-content-center SearchInptGo" type="text"
+                placeholder="Search" id="SearchInput">
+            <div class="container" id="searchFullContainer"
+                style="position: absolute;top: 100%;width: 100%;z-index: 999;text-align: left;display:none">
+                <div class="search-wrap" id="searchResWrap">
+                    <div id="instructionSearch" style="text-align: center;color: #5c5c5c;"><small>Results will be
+                            available below</small></div>
+                    <section>
+                        <div class="container">
+                            <div class="row" id="searchResRow" style="flex-wrap: inherit !important;"> </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div class="overlay" style="display:none;"></div>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="padding: 10px;padding-left: 0;margin-bottom: 15px;text-align: center;"> <span
+                        style="margin: 0;text-transform: uppercase;font-weight: 900;font-size: 1.6em;">FEATURED
+                        DEALS</span> </div>
+            </div>
+        </div>
+        <div class="owl-carousel owl-theme owl-drag">
+            <div class="owl-stage-outer">
+                <div class="owl-stage"
+                    style="width: 4480px; transform: translate3d(-2240px, 0px, 0px); transition: all 0.25s ease 0s;">
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;">
+                        <a class="ab" data-deal_name="canva"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/canva.jpg" alt="Airbnb"
+                                src="images/sq-canva2.jpg" style="opacity: 1; width:100%; border-radius:10px;"> </a>
+                    </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="airbnb"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/1-AIRBNB.jpg" alt="Airbnb"
+                                src="images/airbnb-grid.jpg" style="opacity: 1; width:100%; border-radius:10px;"> </a>
+                    </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="urbanoutfitters"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/UO.jpg" alt="Airbnb"
+                                src="images/urban-outfitters-grid.jpg"
+                                style="opacity: 1; width:100%; border-radius:10px;"> </a> </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="puma"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/PUMMA.jpg" alt="Airbnb"
+                                src="images/puma-grid.jpg" style="opacity: 1; width:100%; border-radius:10px;"> </a>
+                    </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="gamestop"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/GS.jpg" alt="Airbnb"
+                                src="images/gamestop-grid.jpg" style="opacity: 1; width:100%; border-radius:10px;"> </a>
+                    </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="grubhub"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/GRUBHUB.jpg" alt="Airbnb"
+                                src="images/grubhub-grid.jpg" style="opacity: 1; width:100%; border-radius:10px;"> </a>
+                    </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="blackbough"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/old/blackbough-home.jpg" alt="Airbnb"
+                                src="images/blackbough-grid.jpg" style="opacity: 1; width:100%; border-radius:10px;">
+                        </a> </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="wish"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/old/wish-home.jpg" alt="Airbnb"
+                                src="images/wish-grid.jpg" style="opacity: 1; width:100%; border-radius:10px;"> </a>
+                    </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="booking"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/old/booking.com-home.jpg" alt="Airbnb"
+                                src="images/booking.com-grid.jpg" style="opacity: 1; width:100%; border-radius:10px;">
+                        </a> </div>
+                    <div class="owl-item" style="width: 214px; margin-right: 10px;"> <a class="ab"
+                            data-deal_name="uber"> <img decoding="async" loading="lazy" class="owl-lazy"
+                                data-src="https://coupip.com/thumbnails/old/uber-home.jpg" alt="Airbnb"
+                                src="images/uber-grid.jpg" style="opacity: 1; width:100%; border-radius:10px;"> </a>
+                    </div>
+                </div>
+            </div>
+            <div class="owl-nav"><button type="button" role="presentation" class="owl-prev"><span
+                        aria-label="Previous">‹</span></button><button type="button" role="presentation"
+                    class="owl-next"><span aria-label="Next">›</span></button></div>
+            <div class="owl-dots disabled"></div>
+        </div>
+    </div>
+    <center>
+        <hr style="color: #bdbdbd;width: 80%;">
+    </center>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div style="padding: 10px;padding-left: 0;margin-bottom: 15px;text-align: center;"> <span
+                        style="margin: 0;text-transform: uppercase;font-weight: 800;font-size: 1.6em;"
+                        class="indexTitleTwoClass">BROWSE OUR DEALS</span> </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row" id="strcontainer">
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-23">
+                <div class="grid-items"> <a class="aa" data-deal_name="Adidas" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper" src="images/adidas1.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="23"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Adidas</span></div>
+                                <div class="grid-item-uses"><span>801 uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-124">
+                <div class="grid-items"> <a class="aa" data-deal_name="sephora" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper"
+                                src="images/sephora1.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="124"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Sephora</span></div>
+                                <div class="grid-item-uses"><span>1K uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-101">
+                <div class="grid-items"> <a class="aa" data-deal_name="cultbeauty" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper"
+                                src="images/cult-beauty-home.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="101"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Cult Beauty</span>
+                                </div>
+                                <div class="grid-item-uses"><span>914 uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-21">
+                <div class="grid-items"> <a class="aa" data-deal_name="Shein" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper" src="images/shien2.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="21"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Shein</span></div>
+                                <div class="grid-item-uses"><span>862 uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-27">
+                <div class="grid-items"> <a class="aa" data-deal_name="ae" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper" src="images/ae1.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="27"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">American Eagle</span>
+                                </div>
+                                <div class="grid-item-uses"><span>513 uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-22">
+                <div class="grid-items"> <a class="aa" data-deal_name="Nike" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper" src="images/nike.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="22"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Nike</span></div>
+                                <div class="grid-item-uses"><span>502 uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-98">
+                <div class="grid-items"> <a class="aa" data-deal_name="zara" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper" src="images/zara1.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="98"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Zara</span></div>
+                                <div class="grid-item-uses"><span>2.1K uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-128">
+                <div class="grid-items"> <a class="aa" data-deal_name="maccosmetics" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper"
+                                src="images/mac-cosmetics-home.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="128"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">MAC Cosmetics</span>
+                                </div>
+                                <div class="grid-item-uses"><span>789 uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-125">
+                <div class="grid-items"> <a class="aa" data-deal_name="morphe" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper"
+                                src="images/morphe-home.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="125"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Morphe</span></div>
+                                <div class="grid-item-uses"><span>294 uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-136">
+                <div class="grid-items"> <a class="aa" data-deal_name="meshki" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper"
+                                src="images/meshki-home.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="136"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Meshki</span></div>
+                                <div class="grid-item-uses"><span>1.4K uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-131">
+                <div class="grid-items"> <a class="aa" data-deal_name="puma" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper" src="images/PUMMA.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="131"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Puma</span></div>
+                                <div class="grid-item-uses"><span>2K uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-134">
+                <div class="grid-items"> <a class="aa" data-deal_name="Fortunateone" style="text-decoration:none">
+                        <div id="imagewrapper"><img class="img-fluid grid-items-image-wrapper"
+                                src="images/fortunate-one-home.jpg">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;"><span data-storeid="134"
+                                        class="grid-item-description"
+                                        style="font-family: Roboto, sans-serif;font-size: 16px;">Fortunate One</span>
+                                </div>
+                                <div class="grid-item-uses"><span>1.2K uses today!</span></div>
+                                <div hidden><button class="btn btn-primary pulse animated" type="button"
+                                        style="width: 100%;background: var(--bs-blue);font-family: Roboto, sans-serif;">GET
+                                        CODE</button></div>
+                            </div>
+                        </div>
+                    </a> </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center my-2">
+                <button class="btn offer-row-button" id="loadMoreButton">Load More ↓</button>
+            </div>
+        </div>
+    </div>
+    <footer class="text-center footer1">
+        <div class="container text-white py-4 py-lg-5">
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><a class="fw-light link-light" href="#">Terms of Use</a></li>
+                <li class="list-inline-item fw-light me-4"><a class="link-light" href="#">Privacy Policy</a></li>
+                <li class="list-inline-item"><a class="fw-light link-light" href="#">Sitemap</a></li>
+            </ul>
+            <ul class="list-inline">
+                <li class="list-inline-item me-4"><svg xmlns="https://www.w3.org/2000/svg" width="1em" height="1em"
+                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-facebook text-light">
+                        <path
+                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                    </svg></li>
+                <li class="list-inline-item me-4"><svg xmlns="https://www.w3.org/2000/svg" width="1em" height="1em"
+                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-twitter text-light">
+                        <path
+                            d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                    </svg></li>
+                <li class="list-inline-item"><svg xmlns="https://www.w3.org/2000/svg" width="1em" height="1em"
+                        fill="currentColor" viewBox="0 0 16 16" class="bi bi-instagram text-light">
+                        <path
+                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                    </svg></li>
+            </ul>
+            <p class="text-muted mb-0">Copyright © 2023&nbsp;</p>
+        </div>
+    </footer>
+    <div class="footer2">
+        <span>Third-party trademarks are the property of their respective third-party owners.<br>Presence of a
+            third-party trademark does not mean that Coupip has any relationship with that third-party or that the
+            third-party endorses Coupip or its services.</span>
+        <br><span>[[Ldd » 0.0082 – Qrs : 17]] </span>
+    </div>
+
+    <style>
+        .ab {
+            cursor: pointer;
+        }
+    </style>
+    <script src="js/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="./css/app.css">
+    <script type="text/javascript">
+        function _0x3864(_0x4dc5ae, _0x1d43f8) {
+            var _0x3d85fc = _0x3d85();
+            return _0x3864 = function (_0x3864d3, _0x50bdf9) {
+                _0x3864d3 = _0x3864d3 - 0x94;
+                var _0x2a01b4 = _0x3d85fc[_0x3864d3];
+                return _0x2a01b4;
+            }, _0x3864(_0x4dc5ae, _0x1d43f8);
+        } function _0x3d85() {
+            var _0x175463 = ['4894920TSOXSd', '1278091XLXRgL', '2669326aXpKwl', '3082891uCbnVp', 'owlCarousel', '26766856Nhshof', '2968023obUgHy', '4oldoMK', '1043508jcnQTG'];
+            _0x3d85 = function () {
+                return _0x175463;
+            };
+            return _0x3d85();
+        } var _0xdfee89 = _0x3864;
+        (function (_0x1d8e14, _0x1ac31e) {
+            var _0x4890b1 = _0x3864, _0x3c8c7c = _0x1d8e14();
+            while (!![]) {
+                try {
+                    var _0x489f86 = parseInt(_0x4890b1(0x97)) / 0x1 + -parseInt(_0x4890b1(0x98)) / 0x2 + parseInt(_0x4890b1(0x9c)) / 0x3 * (-parseInt(_0x4890b1(0x94)) / 0x4) + -parseInt(_0x4890b1(0x96)) / 0x5 + -parseInt(_0x4890b1(0x95)) / 0x6 + -parseInt(_0x4890b1(0x99)) / 0x7 + parseInt(_0x4890b1(0x9b)) / 0x8;
+                    if (_0x489f86 === _0x1ac31e) break;
+                    else _0x3c8c7c['push'](_0x3c8c7c['shift']());
+                } catch (_0x41e0d0) {
+                    _0x3c8c7c['push'](_0x3c8c7c['shift']());
+                }
+            }
+        }(_0x3d85, 0xac845), jQuery('.owl-carousel')[_0xdfee89(0x9a)]({ 'items': 3.4, 'lazyLoad': ![], 'loop': !![], 'nav': !![], 'dots': ![], 'margin': 0xa, 'autoplay': !![], 'autoplayTimeout': 0xdac, 'autoplayHoverPause': !![], 'responsiveClass': !![], 'responsive': { 0x0: { 'items': 0x3 }, 0x281: { 'items': 0x3, 'margin': 0x12 }, 0x3e8: { 'items': 0x6 } } }));
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('terms').addEventListener('click', soon);
+        document.getElementById('contact').addEventListener('click', soon);
+        document.getElementById('account').addEventListener('click', soon);
+
+        function soon() {
+            Swal.fire({
+                title: 'Coming soon',
+                icon: 'success', // can be 'success', 'error', 'warning', 'info', or 'question'
+                confirmButtonText: 'OK'
+            });
+        }
+        document.querySelectorAll(".ab").forEach(e => {
+            e.addEventListener("click", () => {
+                let name = e.dataset.deal_name
+                let image = e.children[0].src
+                localStorage.setItem("deal_name", name)
+                localStorage.setItem("deal_image", image)
+                window.location.href = "DEALS/index.html"
+            })
+        })
+
+        document.querySelectorAll(".aa").forEach(e => {
+            e.setAttribute("onclick", "open_link(this)")
+        })
+        function open_link(e) {
+            let name = e.dataset.deal_name
+            let image = e.children[0].children[0].src
+            localStorage.setItem("deal_name", name)
+            localStorage.setItem("deal_image", image)
+            window.location.href = "DEALS/index.html"
+        }
+
+        let list = [
+            ['dhgate', '1-dhgate.jpg'],
+            ['temu', 'temu.jpg'],
+            ['amazon', 'amad.jpg'],
+            ['aliexpress', 'aliexpress.jpg'],
+            ['romwe', '1-romwe.jpg'],
+            ['ebay', 'ebay.jpg'],
+            ['steam', '1-steam.jpg'],
+            ["victoria's secret", '1-vs1.jpg'],
+            ['playstation', '2-PSN1.jpg'],
+            ['AIRBNB', 'AIRBNB.jpg'],
+            ['Disney', 'Disney.jpg'],
+            ['GRUBHUB', 'GRUBHUB.jpg'],
+            ['Gamestop', 'Gamestop.jpg'],
+            ['Google Play', 'Google Play.jpg'],
+            ['ROBLOXS', 'ROBLOXS.jpg'],
+            ['Spotify', 'Spotify.jpg'],
+            ['TArget', 'TArget.jpg'],
+            ['Urban Outfitters', 'Urban Outfitters.jpg'],
+            ['XBOX', 'XBOX1.jpg'],
+            ['bestbuy', 'bestbuy.jpg'],
+            ['blackbough home', 'blackbough-home.jpg'],
+            ['canva', 'canva.jpg'],
+            ['chewy', 'chewy.jpg'],
+            ['converse home', 'converse-home.jpg'],
+            ['desenio', 'desenio.jpg'],
+            ['djerf avenue home', 'djerf-avenue-home.jpg'],
+            ['etsy', 'etsy.jpg'],
+            ['grey bandit home', 'grey-bandit-home.jpg'],
+            ['iherb', 'iherb.jpg'],
+            ['itunes', 'itunes1.jpg'],
+            ['netflix', 'n.jpg'],
+            ['nintendo', 'nintendo1.jpg'],
+            ['pizzahut', 'pizzahut.jpg'],
+            ['paypal', 'ppl.jpg'],
+            ['sir the label home', 'sir-the-label-home.jpg'],
+            ['starbucks', 'starbucks.jpg'],
+            ['uber home', 'uber-home.jpg'],
+            ['walmart', 'walmart.jpg'],
+            ['wish home', 'wish-home.jpg']
+        ];
+
+        loadMoreButton.addEventListener("click", load_more)
+
+        function load_more() {
+            for (let i in list) {
+                if (i < 4) {
+                    let name = capitalizeFirstLetter(list[i][0])
+                    let image = list[i][1]
+                    strcontainer.innerHTML +=
+                        `
+            <div class="col-sm-6 col-md-4 col-lg-3 StoreSpace" id="StoreSpc-136">
+                <div class="grid-items">
+                     <a class="aa" data-deal_name="${name}" style="text-decoration:none" onclick="open_link(this)">
+                        <div id="imagewrapper">
+                            <img class="img-fluid grid-items-image-wrapper" src="./logos/${image}">
+                            <div class="grid-item-type">
+                                <div><span style="font-family: Roboto, sans-serif;">Coupons</span></div>
+                            </div>
+                            <div class="grid-item-content">
+                                <div style="font-family: ABeeZee, sans-serif;">
+                                    <span data-storeid="136" class="grid-item-description" style="font-family: Roboto, sans-serif;font-size: 16px;">${name}</span>
+                                </div>
+                                <div class="grid-item-uses">
+                                    <span>1.4K uses today!</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a> 
+                </div>
+            </div>`
+                    if (i >= 0 && i < list.length) {
+                        list.splice(i, 1);
+                    }
+                }
+            }
+        }
+        function capitalizeFirstLetter(inputString) {
+            if (inputString.length === 0) {
+                return inputString; // Return unchanged if the string is empty
+            }
+            return inputString.charAt(0).toUpperCase() + inputString.slice(1);
+        }
+    </script>
+
+</body>
+
+</html>
